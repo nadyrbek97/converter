@@ -6,4 +6,4 @@ class YoutubeFileForm(forms.ModelForm):
 
     class Meta:
         model = YoutubeFile
-        fields = ('link', 'email')
+        fields = ('link',)

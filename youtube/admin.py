@@ -4,4 +4,4 @@ from .models import YoutubeFile
 
 @admin.register(YoutubeFile)
 class YoutubeFileAdmin(admin.ModelAdmin):
-    list_display = ('link', 'email')
+    list_display = ('link', 'uploaded')

@@ -13,6 +13,5 @@ def download(link):
 
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         video_info = ydl.extract_info(link, download=False)
-        # link for mp3 format
-        video_link = video_info['formats'][0]['url']
+        video_link = video_info['formats'][-1]['url']
     return video_link

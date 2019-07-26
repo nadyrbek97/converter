@@ -10,11 +10,10 @@ def home_view(request):
         form = YoutubeFileForm(request.POST)
 
         if form.is_valid():
-            # get link and email from cleaned data
+            # get link from cleaned data
             link = form.cleaned_data.get('link')
-            email = form.cleaned_data.get('email')
             # save object for getting it in admin panel
-            YoutubeFile.objects.create(link=link, email=email)
+            YoutubeFile.objects.create(link=link)
             # passing our link to download function from services.py
             video_link = download(link)
 
