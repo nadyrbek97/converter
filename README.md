@@ -23,3 +23,7 @@
 #### 3. Create superuser 
 
     $ python manage.py createsuperuser
+    
+#### 4. And run your server 
+
+    $ python manage.py runserver
