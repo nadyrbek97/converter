@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import YoutubeFileForm
+from .forms import YoutubeFile
 
 
 def home_view(request):
@@ -9,7 +10,11 @@ def home_view(request):
 
         if form.is_valid():
 
-            print("form working correctly")
+            link = form.cleaned_data.get('link')
+            email = form.cleaned_data.get('email')
+
+            YoutubeFile.objects.create(link=link, email=email)
+
             return render(request, 'youtube/home.html', {'form': form})
     else:
 
