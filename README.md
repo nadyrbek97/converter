@@ -27,3 +27,7 @@
 #### 4. And run your server 
 
     $ python manage.py runserver
+    
+### Test
+
+    $ python manage.py test
