@@ -6,6 +6,7 @@ class YoutubeTest(TestCase):
 
     def setUp(self):
         self.test_link = "https://www.youtube.com/watch?v=NMgLQ950dtg"
+        self.test_invalid_link = "https://football.kulichki.net/spain/"
         self.client = Client()
         self.home_url = reverse('home-view')
 
@@ -22,3 +23,8 @@ class YoutubeTest(TestCase):
 
         self.assertEqual(response.status_code, 200)
 
+    def test_home_invalid_url(self):
+
+        response = self.client.post(self.home_url, {'link': self.test_invalid_link})
+
+        self.assertEqual(response.status_code, 200)
