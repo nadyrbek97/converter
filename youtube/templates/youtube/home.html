@@ -3,16 +3,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Youtube Downloader</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
 
     <div class="container">
+        <h1 class="text-success">Download any video from <span class="text-danger">YOUTUBE.COM</span></h1>
         <form method="post" class="form">
             {% csrf_token %}
             {{ form|crispy }}
-            <button class="btn btn-info">Download Link</button>
+            <button class="btn btn-info">Go to Download Page</button>
         </form>
     </div>
 
