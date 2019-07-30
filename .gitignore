@@ -3,5 +3,3 @@
 /venv
 /.env
 /db.sqlite3
-converter/__pycache__/
-/__pycache__/
