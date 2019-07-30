@@ -4,7 +4,7 @@
 
 ### In command line 
 
-    $ git clone https://github.com/jamilya824/youtube_downloader.git
+    $ git clone https://github.com/nadyrbek97/converter
     $ virtualenv venv -p python3
     $ source venv/bin/activate
     $ cd converter
